@@ -738,28 +738,6 @@
             },
             {
               "type": {
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "turret",
-                "targetX",
-                "=",
-                "player.CenterX()"
-              ]
-            },
-            {
-              "type": {
-                "value": "ModVarObjet"
-              },
-              "parameters": [
-                "turret",
-                "targetY",
-                "=",
-                "player.CenterY()"
-              ]
-            },
-            {
-              "type": {
                 "value": "PrimitiveDrawing::Drawer::ClearShapes"
               },
               "parameters": [
@@ -784,7 +762,28 @@
               ]
             }
           ],
-          "actions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "x",
+                "=",
+                "player.CenterX()"
+              ]
+            },
+            {
+              "type": {
+                "value": "ModVarScene"
+              },
+              "parameters": [
+                "y",
+                "=",
+                "player.CenterY()"
+              ]
+            }
+          ],
           "events": [
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -814,28 +813,6 @@
                     "turret",
                     "aiDetected",
                     "False"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "turret",
-                    "targetX",
-                    "=",
-                    "Variable(x)"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ModVarObjet"
-                  },
-                  "parameters": [
-                    "turret",
-                    "targetY",
-                    "=",
-                    "Variable(y)"
                   ]
                 }
               ]
@@ -904,8 +881,8 @@
                     "NewShapePainter",
                     "turret.CenterX()",
                     "turret.CenterY()",
-                    "turret.Variable(targetX)",
-                    "turret.Variable(targetY)",
+                    "Variable(x)",
+                    "Variable(y)",
                     "3"
                   ]
                 }
